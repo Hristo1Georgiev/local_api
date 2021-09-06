@@ -1,0 +1,92 @@
+body {
+    text-align: center;
+    background-color: rgb(165, 201, 202);
+}
+
+header,
+footer {
+    background-color: #11a0e2;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    color: rgb(6, 6, 163);
+    font-style: italic;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    padding: 10px;
+    background: rgb(227, 244, 247);
+    font-size: 16px;
+    list-style: none;
+    display: inline-flex;
+    border-radius: 7px;
+    margin: 10px;
+}
+
+.textInput {
+    width: 230px;
+    border: none;
+}
+
+.textInput:hover {
+    background-color: rgb(182, 240, 167);
+}
+
+#inputText {
+    width: 410px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#inputText:hover {
+    background-color: rgb(187, 231, 178);
+    border: solid rgb(76, 206, 15);
+    cursor: pointer;
+}
+
+#button {
+    margin-left: 3px;
+    border-radius: 5px;
+    padding: 5px;
+    border: solid rgb(100, 96, 96) 2px;
+    background: #dae7d4;
+    color: rgb(15, 14, 14);
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80px;
+}
+
+#button:hover {
+    border: solid rgb(32, 199, 17) 2px;
+    background-color: rgb(191, 214, 168);
+}
+
+.checkox {
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-flex;
+}
+
+.checked {
+    text-decoration-color: red;
+    text-decoration-line: line-through;
+    width: 230px;
+    border: none;
+}
+
+.deleteBttn {
+    content: "\f2ed";
+}
