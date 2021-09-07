@@ -24,7 +24,8 @@ const postData = async (toDo) => {
         const result = await fetch(apiUrl, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ "description": toDo })
+            body: JSON.stringify({ "description": toDo,
+         })
         });
         const data = await result.json();
         log("Result:", data);

@@ -35,7 +35,7 @@ li {
 }
 
 .textInput {
-    width: 230px;
+    width: auto;
     border: none;
 }
 
@@ -44,7 +44,7 @@ li {
 }
 
 #inputText {
-    width: 410px;
+    width: 210px;
     height: 20px;
     border-radius: 5px;
 }
@@ -81,9 +81,10 @@ li {
 }
 
 .checked {
+    align-self: auto;
     text-decoration-color: red;
     text-decoration-line: line-through;
-    width: 230px;
+    width: auto;
     border: none;
 }
 

@@ -30,8 +30,19 @@ const updateTask = async (e) => {
             description: e.target.value,
             done: e.target.parentElement.checked
         });
-        getList();
-    };
+    } else {
+        await updateData({
+            _id: e.target.id,
+            description: e.target.value,
+            done: e.target.parentElement.checked,
+        });
+        if (e.target.checked == true) {
+            e.target.parentElement.className = "checked";
+        }
+        else { e.target.parentElement.className = "" }
+        getList;
+    }
+
 };
 
 // Delete a task.
@@ -58,7 +69,7 @@ const createList = async (toDo) => {
         if (toDo.target.checked) {
             updateTask;
             textInput.className = "checked";
-           
+            log('checked');
         } else {
             updateTask;
             textInput.className = "textInput";
