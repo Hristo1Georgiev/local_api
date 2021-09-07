@@ -30,6 +30,7 @@ const updateTask = async (e) => {
             description: e.target.value,
             done: e.target.parentElement.checked
         });
+        getList();
     };
 };
 
@@ -55,8 +56,11 @@ const createList = async (toDo) => {
     checkBox.addEventListener("change", updateTask);
     checkBox.addEventListener("change", async (toDo) => {
         if (toDo.target.checked) {
+            updateTask;
             textInput.className = "checked";
+           
         } else {
+            updateTask;
             textInput.className = "textInput";
         };
     });
@@ -83,3 +87,4 @@ const createList = async (toDo) => {
 
 // Add event listeren to add the new task.
 button.addEventListener("click", addTask);
+getList();

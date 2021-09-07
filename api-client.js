@@ -8,6 +8,7 @@ const getData = async () => {
         const result = await fetch(apiUrl, {
             method: "GET",
             headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(getData)
         });
         const data = await result.json();
         log("Result:", data);
