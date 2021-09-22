@@ -1,4 +1,3 @@
-
 const log = console.log
 const apiUrl = "http://localhost:3000/";
 

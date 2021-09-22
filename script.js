@@ -1,3 +1,4 @@
+
 // Get elements.
 const list = document.getElementById("list");
 const inputText = document.getElementById("inputText");
@@ -23,7 +24,7 @@ const addTask = async () => {
 };
 
 // Update a task.
-const updateTask = async (e) => {
+const updateTask = async (e) => {      
     if (e.target.type == "text") {
         await updateData({
             _id: e.target.id,
@@ -35,14 +36,15 @@ const updateTask = async (e) => {
             _id: e.target.id,
             description: e.target.value,
             done: e.target.parentElement.checked,
+          
         });
         if (e.target.checked == true) {
             e.target.parentElement.className = "checked";
+               preventDefault();
         }
         else { e.target.parentElement.className = "" }
-        getList;
+        getList();
     }
-
 };
 
 // Delete a task.
@@ -65,13 +67,15 @@ const createList = async (toDo) => {
     checkBox.className = "checkBox";
     checkBox.setAttribute("type", "checkBox");
     checkBox.addEventListener("change", updateTask);
+    checkBox.value = "checked";
+    
     checkBox.addEventListener("change", async (toDo) => {
         if (toDo.target.checked) {
-            updateTask;
-            textInput.className = "checked";
+            updateTask();
+            textInput.className = "checked";  
             log('checked');
         } else {
-            updateTask;
+            updateTask();
             textInput.className = "textInput";
         };
     });
